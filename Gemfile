@@ -51,3 +51,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'nokogiri', '~> 1.8.0'
 gem 'friendly_id', '~> 5.1.0'
+gem 'devise'
