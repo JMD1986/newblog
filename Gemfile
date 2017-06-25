@@ -52,3 +52,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'nokogiri', '~> 1.8.0'
 gem 'friendly_id', '~> 5.1.0'
 gem 'devise'
+gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'jquery-rails'
+gem 'devcamp_view_tool', '~> 0.1.0'
+gem 'petergate', '~> 1.7'
