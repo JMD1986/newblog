@@ -20,3 +20,5 @@
 
 # i dont want my secrets shared
 /config/secrets.yml
+
+.env
