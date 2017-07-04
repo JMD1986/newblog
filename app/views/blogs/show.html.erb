@@ -8,6 +8,8 @@
     <%= @blog.body %>
   </p>
   <%= render 'comments/comment_form.html.erb' %>
-
-  <%= render @blog.comments %>
+  
+  <div id="comments" data-blog-id="<%= @blog.id %>">
+    <%= render @blog.comments %>
+  </div>
 </div>
