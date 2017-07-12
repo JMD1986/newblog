@@ -11,14 +11,6 @@ User.create(email: "usertest@test.com",
 
 puts "1 regular User created"
 
-AdminUser.create(email: "admin@test.com",
-									password: "asdfasdf",
-									password_confirmation: "asdfasdf",
-									first_name: "Admin",
-									last_name: "Name",
-									phone: "4322386131")
-
-
 3.times do |topic|
   Topic.create!(
     title: "Topic #{topic}"
