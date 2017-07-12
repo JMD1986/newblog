@@ -79,7 +79,10 @@ class BlogsController < ApplicationController
     redirect_to blogs_url, notice: 'Post status has been updated.'
   end
 
-  private
+  def set_sidebar_topics
+    
+      @side_bar_topics = Topic.with_blogs
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_blog
       @blog = Blog.friendly.find(params[:id])
