@@ -70,6 +70,7 @@ body {
 
 .masthead-brand {
   margin-bottom: 0;
+  margin-left: -76px;
 }
 
 .nav-masthead .nav-link {
@@ -93,7 +94,7 @@ body {
   color: #fff;
   border-bottom-color: #fff;
 }
-
+.nav-masthead{}
 @media (min-width: 48em) {
   .masthead-brand {
     float: left;
@@ -188,6 +189,7 @@ body {
   margin-right: 15px;
 }
 
+
 #background {
   position: fixed;
   top: 50%;
@@ -196,11 +198,13 @@ body {
   min-height: 100%;
   width: auto;
   height: auto;
-  z-index: -100;
+  z-index: -1;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: image-url('home_bg.jpg') no-repeat;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), image-url('home_bg.jpg') no-repeat;
   background-size: cover;
+  position: absolute;
+  background-color: black;
 }
 
 .app-footer {
@@ -208,7 +212,11 @@ body {
 }
 
 .cover-heading{
-  padding-top:100px;
+  padding-top:50px;
+  padding-bottom: 50px;
+}
+.lead2 {
+  padding-top: 25px;
 }
 .tech-news {
   color: black;
@@ -243,4 +251,11 @@ body {
 
 .skills {
   margin: 10px 0px
+}
+.lead {
+  background-color: black;
+  height: 4rem;
+  padding: 1rem 0;
+  border-radius: 5%;
+  border: 3px solid gray;
 }
