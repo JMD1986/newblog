@@ -13,6 +13,7 @@ class BlogsController < ApplicationController
       @blogs = Blog.published.recent.page(params[:page]).per(5)
     end
     @page_title = "My Portfolio Blog"
+    @side_bar_topics = Topic.with_blogs
   end
 
   # GET /blogs/1
@@ -81,16 +82,19 @@ class BlogsController < ApplicationController
   end
 
   def set_sidebar_topics
+    @side_bar_topics = Topic.with_blogs
+  end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_blog
+    @blog = Blog.friendly.find(params[:id])
+  end
 
-      @side_bar_topics = Topic.with_blogs
-    end
-    # Use callbacks to share common setup or constraints between actions.
-    def set_blog
-      @blog = Blog.friendly.find(params[:id])
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def blog_params
+    params.require(:blog).permit(:title, :body, :topic_id, :status)
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def blog_params
-      params.require(:blog).permit(:title, :body, :topic_id, :status)
-    end
+  def set_sidebar_topics
+    @side_bar_topics = Topic.with_blogs
+  end
 end
